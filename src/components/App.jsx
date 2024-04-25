@@ -1,9 +1,22 @@
+import Profile from "./Profile";
+import userData from "../userData.json";
+import FriendList from "./FriendList";
+import friends from "../friends.json";
+import transactions from "../transactions.json";
+import TransactionHistory from "./TransactionHistory";
+
 export default function App() {
-    return (<>
-        <h1>Page title</h1>
-        <button>click me</button>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing
-          elit. Odio consequuntur laborum facere, esse asperiores
-            nam ipsum eveniet! Hic, nostrum id.</p>
-    </>);
+  return (
+    <>
+      <Profile
+        name={userData.username}
+        tag={userData.tag}
+        location={userData.location}
+        image={userData.avatar}
+        stats={userData.stats}
+      />
+      <FriendList friends={friends} />
+      <TransactionHistory items={transactions} />
+    </>
+  );
 }
