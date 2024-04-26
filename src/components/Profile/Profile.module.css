@@ -1,0 +1,34 @@
+.container {
+  display: flex;
+  text-align: center;
+  margin: 30px auto;
+  font-size: 30px;
+  border: 2px solid black;
+  border-radius: 20px;
+  max-width: 600px;
+  flex-direction: column;
+}
+.name {
+  font-size: 40px;
+}
+.list {
+  margin-top: 20px;
+  background-color: floralwhite;
+  display: flex;
+  flex-direction: row;
+  border-radius: 0 0 20px 20px;
+}
+.item {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  width: 200px;
+  border-left: 2px solid grey;
+  border-top: 2px solid grey;
+}
+.item:first-child {
+  border-left: none;
+}
+.image {
+  margin: 20px auto;
+}

@@ -1,23 +1,24 @@
+import css from "./Profile.module.css";
 export default function Profile({ name, tag, location, image, stats }) {
   return (
-    <div>
+    <div className={css.container}>
       <div>
-        <img src={image} alt="User avatar" />
-        <p>{name}</p>
+        <img src={image} alt="User avatar" className={css.image} />
+        <p className={css.name}>{name}</p>
         <p>@{tag}</p>
         <p>{location}</p>
       </div>
 
-      <ul>
-        <li>
+      <ul className={css.list}>
+        <li className={css.item}>
           <span>Followers</span>
           <span>{stats.followers}</span>
         </li>
-        <li>
+        <li className={css.item}>
           <span>Views</span>
           <span>{stats.views}</span>
         </li>
-        <li>
+        <li className={css.item}>
           <span>Likes</span>
           <span>{stats.likes}</span>
         </li>
@@ -25,4 +26,3 @@ export default function Profile({ name, tag, location, image, stats }) {
     </div>
   );
 }
-``;

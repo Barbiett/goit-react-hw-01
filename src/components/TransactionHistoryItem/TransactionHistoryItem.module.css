@@ -1,0 +1,19 @@
+.container {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.container tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.container tr:hover {
+  background-color: #ddd;
+}
+
+.container td {
+  padding: 8px;
+}
+.item {
+  border: 1px solid #ddd;
+}
