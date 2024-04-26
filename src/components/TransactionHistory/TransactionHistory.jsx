@@ -1,7 +1,7 @@
 import css from "./TransactionHistory.module.css";
 import TransactionHistoryItem from "../TransactionHistoryItem/TransactionHistoryItem";
-import transactions from "../../transactions.json";
-export default function TransactionHistory() {
+
+export default function TransactionHistory({ items }) {
   return (
     <table className={css.container}>
       <thead className={css.header}>
@@ -11,7 +11,9 @@ export default function TransactionHistory() {
           <th className={css.item}>Currency</th>
         </tr>
       </thead>
-      <TransactionHistoryItem transactions={transactions} />
+      <tbody>
+        <TransactionHistoryItem transactions={items} />
+      </tbody>
     </table>
   );
 }
